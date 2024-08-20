@@ -17,7 +17,7 @@ import jakarta.transaction.Transactional;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer,String>{
 
-	@Query(value = "select firstName, lastName, address, city, state, email,phone from sunbase.customers", nativeQuery = true)
+	@Query(value = "select first_name, last_name, address, city, state, email,phone from customers", nativeQuery = true)
 	public Page<String> fetchAllCustomers(Pageable pageable);
 	
 	@Transactional
