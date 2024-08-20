@@ -10,12 +10,12 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/v1/auth/**")
-                .allowedOrigins("https://usermanagementfrontend-production.up.railway.app/")  // Change to your frontend URL
+                .allowedOrigins("https://usermanagementfrontend-production.up.railway.app")  // Change to your frontend URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowCredentials(true);
 
         registry.addMapping("/api/v1/customer/**")
-                .allowedOrigins("https://usermanagementfrontend-production.up.railway.app/")  // Same or different URL as needed
+                .allowedOrigins("https://usermanagementfrontend-production.up.railway.app")  // Same or different URL as needed
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowCredentials(true);
     }
